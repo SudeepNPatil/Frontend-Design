@@ -1,20 +1,118 @@
+body{
+	text-align:center;
+	background-color:#9370DB;
+	position:absolute;
+	top:20px;
+	left:480px;
+	width:350px;
+	
+	
+}
+
 #form{
        
-	background-color:#ffff00;
-        align:center;
-        padding:20px;
+	background-color:#ffffff;
+        height:580px;
+        padding:8px;
         border:05px;
 	text-color:black;
+	
      }
 
-body{
-      text-align:center;
-}
-
 label{
-	 display: inline-block;
-         width: 140px;
-         text-align: right;
+	text-align:left;
+	display: block;
+  	margin-bottom: 5px; 
+	font-weight:bold;
+
 }
 
+.ha{
 	
+	width:300px;
+	height:30px;
+}
+.hb{
+	
+	width:300px;
+	height:30px;
+}
+.hc{
+	
+	width:300px;
+	height:30px;
+}
+.hd{
+	
+	width:300px;
+	height:30px;
+}
+.he{
+	
+	width:304px;
+	height:38px;
+}
+.hf{
+	position:absolute;
+	top:480px;
+	right:20px;
+	
+}
+
+ .aa{
+	position:absolute;
+	top:70px;
+	left:20px;
+}
+
+ .ab{
+	position:absolute;
+	top:140px;
+	left:20px;
+}
+
+ .ac{
+	position:absolute;
+	top:210px;
+	left:20px;
+}
+
+ .ad{
+	position:absolute;
+	top:280px;
+	left:20px;
+}
+ .ae{
+	position:absolute;
+	top:370px;
+	left:20px;
+}
+ .af{
+	position:absolute;
+	top:450px;
+	left:20px;
+}
+
+.bt1{
+	position:absolute;
+	top:545px;
+	left:20px;
+	width:150px;
+	height:40px;
+	background-color:gray;
+	font-weight:bold;
+}
+.bt2{
+	position:absolute;
+	top:545px;
+	left:180px;
+	width:150px;
+	height:40px;
+	background-color:green;
+	font-weight:bold;
+}
+
+
+
+
+
