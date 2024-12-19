@@ -1,0 +1,123 @@
+*{
+	font-family: 'Times New Roman', Times, serif;
+}
+body{
+	display:flex;
+	justify-content:center;
+}
+.parent-wraper{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:flex-start;
+	flex-direction:column;
+	width:500px;
+	
+	
+}
+.navbar{
+	display:flex;
+	flex-wrap:wrap;
+	align-items:flex-start;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	width:500px;
+	height:40px;
+	margin-top:80px;
+	
+	
+}
+.navbar >a{
+	color:black;
+	text-decoration: none;
+}
+.navbar :first-child{
+	font-weight:bold;
+	font-size:24px;
+	margin-right:10px;
+}
+footer{
+	text-align: center;
+	margin:auto 0;
+	opacity: 0.5;
+	padding-top: 50px;
+	font-size: 13px;
+}
+
+/*main--Page--style*/
+
+.main-body{
+	display: flex;
+	flex-direction:column;
+	/*align-items:flex-start;*/
+	justify-content: flex-start;	
+}
+.main-body >p{
+	margin:30px 0 0 0;
+	line-height: 1.4;
+	
+}
+img{
+	width:500px;
+	height:700px;
+	margin:50px 0 40px 0;
+}
+
+/*contact--section--style*/
+.contact_body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 50px;
+	align-items: flex-start;
+	
+}
+a{
+	color:rgb(214, 90, 18);
+	text-decoration: none;
+}
+
+/*Writings--section--style*/
+
+.writings_body{
+    padding-top:30px;
+	padding-left: 5px;
+	line-height: 1.4;
+}
+
+/*Project--section--style*/
+
+h3{
+	margin:30px 0 18px 0;
+	align-self: center;
+}
+hr{
+	border: top 2px; 
+	width:150px;
+}
+.Project_images{
+	height:600px;
+	width:300px;
+	align-self:center;
+	margin:15px;
+}
+.caption{
+	align-self: center;
+	font-size: 15px;
+	font-weight: bold;
+	padding-bottom: 50px;
+	margin:0;
+}
+P{
+	margin:8px 0 18px 20px;
+	padding: 0px;
+	line-height: 1.4;
+	
+}
+h4{
+	margin:0 0 0 0;
+}
+ul{
+	margin:10px 0 18px 0;
+}
+
