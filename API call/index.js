@@ -37,7 +37,7 @@ getweather.addEventListener("click", () => {
         })
         .then(data => {
             //console.log('Weather Data:', data);
-            //console.log(data)
+            console.log(data)
             /*  console.log(`temperature : ${data.hourly.temperature_2m[0]} °C`);
              console.log(`time : ${data.hourly.time[0]}`);
              console.log(`WindSpeed : ${data.hourly.wind_speed_10m[0]} km/h`);
