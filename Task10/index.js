@@ -5,4 +5,4 @@ import "./style.css";
 
 const rootelement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootelement);
-root.render(< App />)
+root.render(<App />);
