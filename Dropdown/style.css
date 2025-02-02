@@ -1,0 +1,45 @@
+body{
+    text-align: center;
+}
+
+.btn{
+    text-align: center;
+    margin-top: 40px;
+    background-color:aquamarine;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.List{
+    margin-top: 20px;
+    background-color: black;
+    list-style: none;
+    width: 170px;
+    text-align: start;
+    height: 165px;
+    border-radius: 6px;
+    position: absolute;
+    top: 80px;
+    left: 43%;
+    visibility: hidden;
+}
+
+.List > li {
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    
+   
+}
+
+.btn:hover + .List {
+   visibility: visible;
+}
+
+
