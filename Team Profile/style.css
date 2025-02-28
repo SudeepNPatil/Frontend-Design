@@ -1,0 +1,97 @@
+
+.container{
+    margin-top: 80px;
+   text-align: center;
+}
+
+.child1{
+    display: block;
+    margin-top: 20px;
+}
+
+.Pro1{
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+}
+
+.Pro2{
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+}
+
+.name{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.subname{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 6px;
+    opacity: 0.5;
+   
+}
+
+.Profile1{
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    display: inline-block;
+    background-color: gray;
+    text-align: center;
+}
+
+.Profile2{
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    background-color: gray;
+    display: inline-block;
+}
+
+
+
+.child2{
+    display: block;
+   
+}
+
+.Pro3{
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+}
+
+.Pro4{
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+}
+
+.Profile3{
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    display: inline-block;
+    background-color: gray;
+}
+
+.Profile4{
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    background-color: gray;
+    display: inline-block;
+}
+
+.sub-container{
+    border: 1px solid black;
+    width: 700px;
+    border-radius: 40px;
+    box-shadow: 100px;
+    margin-left: 350px;
+}
