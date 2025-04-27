@@ -1,0 +1,40 @@
+#mydiv{
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 200px;
+    border: 1px solid black;
+}
+
+#child1{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin-left: 20px;
+}
+#child2{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin-left: 20px;
+}
+#child3{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin-left: 20px;
+}
+#child4{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin-left: 20px;
+}

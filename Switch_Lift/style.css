@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.main{
+  /*  border: 1px solid black; */
+   margin: 125px 200px;
+   text-align: center;
+   font-weight: bold;
+
+}
+#input1,#input2{
+    border-radius: 2px;
+    border: 1px solid black;
+    height: 21px;
+    padding-left: 8px;
+}
+label{
+     display: inline-block;
+     margin-top: 30px;
+}
+#btn{
+    margin-top: 40px;
+    width: 175px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: blue;
+    color: azure;
+    margin-left: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.flors{
+    border-bottom: 2px solid black;
+    width: auto;
+    height: 125px;
+    background-color:#ecffe7;
+    box-sizing: border-box;
+    /* margin: 0px 0px 0px 100px; */
+}
+
+.childdiv{
+    background-color: white;
+    width: 120px;
+    height: 123.5px;
+    border: 2px solid black;
+    border-bottom: none;
+    border-top: none;
+    margin-left: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.upbtn{
+    border-radius:20px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    margin-top: 12px;
+    font-size: 70%;
+    cursor: pointer;
+}
+.downbtn{
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: rgb(172, 169, 167);
+    color: white;
+    margin-top: 10px;
+    font-size: 60%;
+    cursor: pointer;
+}
+p{
+    font-weight: bold;
+    font-size:medium;
+    margin-top: 5px;
+    margin-top: 10px;
+}
+
+.lifts-contenar{
+    position: relative;
+    top: -112px;
+    left: 80px;
+    width: auto;
+    height: auto;
+}
+.lifts{
+    display: inline-block;
+    position: relative;
+    margin-left: 100px;
+    width: 100px;
+    height: 100px;
+    background : linear-gradient(to right,blue 50%,orange 50%); 
+    border: 1px solid black;
+}
+#lift1{
+    position: relative;
+}
+
