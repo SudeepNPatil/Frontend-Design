@@ -10,8 +10,6 @@ const main = document.getElementById("main")
 
 const btn = document.getElementById("btn")
 
-
-
 let flore;
 
 let lift;
@@ -27,12 +25,11 @@ function myfun(parameter) {
 
         const lif = document.getElementById("lift1")
 
-
-        lif.style.top = lif.offsetTop - 40 + "px";
+        lif.style.top = lif.offsetTop - 2 + "px";
 
         console.log(lif.offsetTop)
 
-    }, 1000)
+    }, 500)
 
 }
 
@@ -126,10 +123,6 @@ btn.addEventListener("click", (event) => {
 
             }, 1000)
 
-
-
-
-
         });
 
         count--
@@ -154,8 +147,6 @@ btn.addEventListener("click", (event) => {
 
         lifts_tub.appendChild(lifts)
     }
-
-
 })
 
 
