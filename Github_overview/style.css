@@ -71,6 +71,9 @@
    color: blue;
    gap: 80px;
 }
+.repotitle{
+    text-align: center;
+}
 .contenardiv{
     text-align: center;
 }
@@ -78,7 +81,7 @@
 .repodiv{
     display: inline-block;
     margin: 50px;
-    background-color: rgb(168, 214, 168);
+    background-color: rgb(191, 219, 221);
     width: 300px;
     border-radius: 10px;
     box-shadow: 10px;
@@ -86,13 +89,19 @@
    cursor: pointer;
    overflow:hidden;
 }
-.star , .fork{
-    display: inline-block;
-    
+.containstarandfork{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 8px;
 }
-.starcount{
-    display: inline-block;
+.containstarandfork > p{
+    padding: 0px;
+    margin: 0px;
+
 }
-.forkcount{
-  display: inline-block;
+.description{
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 10px;
 }

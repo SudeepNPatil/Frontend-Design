@@ -90,6 +90,11 @@ function display(respuser, resprepo) {
     repornum.textContent = respuser.public_repos
     numfollw.appendChild(repornum)
 
+    const repotitle = document.createElement('h2')
+    repotitle.setAttribute('class', 'repotitle')
+    repotitle.textContent = "Repositories"
+    document.body.appendChild(repotitle)
+
     const contenardiv = document.createElement('div')
     contenardiv.setAttribute('class', 'contenardiv')
     document.body.appendChild(contenardiv)
@@ -104,31 +109,32 @@ function display(respuser, resprepo) {
         reponame.textContent = resprepo[j].name
         repodiv.appendChild(reponame)
 
-        /* let containstarandfork = document.createElement('div')
-        containstarandfork.setAttribute('class','containstarandfork')
-        repodiv.appendChild(containstarandfork) */
+        let containstarandfork = document.createElement('div')
+        containstarandfork.setAttribute('class', 'containstarandfork')
+        repodiv.appendChild(containstarandfork)
 
         let star = document.createElement('p')
-        star.setAttribute('class', 'star')
         star.textContent = 'Star'
-        repodiv.appendChild(star)
+        containstarandfork.appendChild(star)
 
         let fork = document.createElement('p')
-        fork.setAttribute('class', 'fork')
         fork.textContent = 'Fork'
-        repodiv.appendChild(fork)
+        containstarandfork.appendChild(fork)
+
+        let containstarandfork1 = document.createElement('div')
+        containstarandfork1.setAttribute('class', 'containstarandfork')
+        repodiv.appendChild(containstarandfork1)
 
         let starcount = document.createElement('p')
-        starcount.setAttribute('class', 'starcount')
         starcount.textContent = resprepo[j].stargazers_count
-        repodiv.appendChild(starcount)
+        containstarandfork1.appendChild(starcount)
 
         let forkcount = document.createElement('p')
-        forkcount.setAttribute('class', 'forkcount')
         forkcount.textContent = resprepo[j].fork
-        repodiv.appendChild(forkcount)
+        containstarandfork1.appendChild(forkcount)
 
         let description = document.createElement('p')
+        description.setAttribute('class', 'description')
         description.textContent = resprepo[j].description
         repodiv.appendChild(description)
 
