@@ -112,6 +112,43 @@ btn.addEventListener("click", (event) => {
 
             if (lif == null) {
 
+                for (let l = 0; l < queue1.length; l++) {
+
+                    let lol = document.getElementById(`lift${l}`)
+                    let lol2 = lol.getAttribute('setposition')
+                    let lol3 = Number(lol2)
+                    if (lol3 == va) {
+                        const alert = document.createElement('div')
+                        alert.setAttribute('class', 'alert')
+                        alert.style.backgroundColor = 'rgb(225 225 0)'
+                        alert.textContent = `lift is already there in ${va} flore`
+                        document.body.appendChild(alert)
+                        setTimeout(() => {
+
+                            document.body.removeChild(alert)
+
+                        }, 3000)
+
+                        return 0;
+                    }
+
+                    if (queue2[l] == 'false') {
+
+                        const alert = document.createElement('div')
+                        alert.setAttribute('class', 'alert')
+                        alert.style.backgroundColor = 'rgb(0 225 0)'
+                        alert.textContent = 'All lifts are in upper flore ! Please Click Down button to get lift'
+                        document.body.appendChild(alert)
+                        setTimeout(() => {
+
+                            document.body.removeChild(alert)
+
+                        }, 3000)
+                        return 0;
+
+                    }
+                }
+
                 const alert = document.createElement('div')
                 alert.setAttribute('class', 'alert')
                 alert.textContent = 'lifts are busy! Please wait for mument'
@@ -159,6 +196,9 @@ btn.addEventListener("click", (event) => {
                         clearInterval(intervalid)
                         lif.setAttribute("setposition", `${va}`)
 
+                        let leftdoor = document.getElementById(`leftdoor${index}`)
+                        let rightdoor = document.getElementById(`rightdoor${index}`)
+
                         let per = 90;
                         let doorbg = setInterval(function () {
 
@@ -170,11 +210,15 @@ btn.addEventListener("click", (event) => {
                                 clearInterval(doorbg)
                                 queue2[index] = 'false'
                                 setTimeout(() => {
-                                    lif.style.background = ''
-                                }, 1000)
+                                    leftdoor.style.background = ''
+                                    rightdoor.style.background = ''
+                                    rightdoor.style.borderLeft = '1px solid black'
+                                }, 1500)
                             }
 
-                            lif.style.background = `linear-gradient(to right, blue ${per}%, white ${per}%)`;
+                            leftdoor.style.background = `linear-gradient(to right, rgb(78, 255, 225) ${per}%, white ${per}%)`;
+                            rightdoor.style.background = `linear-gradient(to left, rgb(78, 255, 225) ${per}%, white ${per}%)`;
+                            rightdoor.style.borderLeft = '0px'
                         }, 40)
 
 
@@ -211,10 +255,52 @@ btn.addEventListener("click", (event) => {
 
             let funforlifyid = getliftid_downbtn(queue1, queue2, va)
 
+            console.log(funforlifyid)
+
             const lif = document.getElementById(funforlifyid)
+
+            console.log(lif)
+
 
 
             if (lif == null) {
+
+                for (let l = 0; l < queue1.length; l++) {
+
+                    let lol = document.getElementById(`lift${l}`)
+                    let lol2 = lol.getAttribute('setposition')
+                    let lol3 = Number(lol2)
+                    if (lol3 == va) {
+                        const alert = document.createElement('div')
+                        alert.setAttribute('class', 'alert')
+                        alert.style.backgroundColor = 'rgb(225 225 0)'
+                        alert.textContent = `lift is already there in ${va} flore`
+                        document.body.appendChild(alert)
+                        setTimeout(() => {
+
+                            document.body.removeChild(alert)
+
+                        }, 3000)
+
+                        return 0;
+                    }
+                    if (queue2[l] == 'false') {
+
+                        const alert = document.createElement('div')
+                        alert.setAttribute('class', 'alert')
+                        alert.style.backgroundColor = 'rgb(0 225 0)'
+                        alert.textContent = 'All lifts are in lower flore ! Please Click Up button to get lift'
+                        document.body.appendChild(alert)
+                        setTimeout(() => {
+
+                            document.body.removeChild(alert)
+
+                        }, 3000)
+                        return 0;
+
+                    }
+
+                }
 
                 const alert = document.createElement('div')
                 alert.setAttribute('class', 'alert')
@@ -259,6 +345,10 @@ btn.addEventListener("click", (event) => {
                         clearInterval(intervalid)
                         lif.setAttribute("setposition", `${va}`)
                         /*  queue2[index] = 'false' */
+
+                        let leftdoor = document.getElementById(`leftdoor${index}`)
+                        let rightdoor = document.getElementById(`rightdoor${index}`)
+
                         let per = 90;
                         let doorbg = setInterval(function () {
 
@@ -270,12 +360,16 @@ btn.addEventListener("click", (event) => {
                                 clearInterval(doorbg)
                                 queue2[index] = 'false'
                                 setTimeout(() => {
-                                    lif.style.background = ''
-                                }, 1000)
+                                    leftdoor.style.background = ''
+                                    rightdoor.style.background = ''
+                                    rightdoor.style.borderLeft = '1px solid black'
+                                }, 1500)
 
                             }
 
-                            lif.style.background = `linear-gradient(to right, blue ${per}%, white ${per}%)`;
+                            leftdoor.style.background = `linear-gradient(to right, rgb(78, 255, 225) ${per}%, white ${per}%)`;
+                            rightdoor.style.background = `linear-gradient(to left, rgb(78, 255, 225) ${per}%, white ${per}%)`;
+                            rightdoor.style.borderLeft = '0px'
                         }, 40)
 
                     }
@@ -312,6 +406,16 @@ function lft(f, l) {
     for (i = 0; i < lift; i++) {
 
         let lifts = document.createElement("div")
+
+        let leftdoor = document.createElement('div')
+        leftdoor.setAttribute('class', 'leftdoor')
+        leftdoor.setAttribute('id', `leftdoor${i}`)
+        lifts.appendChild(leftdoor)
+
+        let rightdoor = document.createElement('div')
+        rightdoor.setAttribute('class', 'rightdoor')
+        rightdoor.setAttribute('id', `rightdoor${i}`)
+        lifts.appendChild(rightdoor)
 
         lifts.setAttribute('class', 'lifts')
 
@@ -367,9 +471,7 @@ function getliftid_downbtn(q1, q2, loc_btn) {
         }
 
     }
-
     return '0';
-
 }
 
 
