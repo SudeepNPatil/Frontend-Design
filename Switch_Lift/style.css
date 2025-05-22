@@ -11,6 +11,7 @@
    font-weight: bold;
 
 }
+
 #input1,#input2{
     border-radius: 2px;
     border: 1px solid black;
@@ -32,6 +33,12 @@ label{
     border: none;
     cursor: pointer;
 }
+/* @media (max-width : 768px){
+    #btn{
+         margin: 10px auto;
+        width: 30vw;
+    }
+} */
 
 .flors{
     border-bottom: 2px solid black;
@@ -131,3 +138,61 @@ p{
     color: whitesmoke;
 }
 
+
+/*  for Mobile small screen */
+
+@media (max-width : 480px){
+
+    .main{
+        text-align: center;
+        font-weight: bold;
+        width: fit-content;
+        border: 1px solid black;
+        margin: 50px auto;
+        padding: 10px;
+    }
+
+    #btn{
+         margin: 10px auto;
+        width: 20vw;
+    }
+
+
+}
+
+
+/*  for Mobile medium screen */
+@media(max-width : 768px){
+    .main{
+        text-align: center;
+        font-weight: bold;
+        width: fit-content;
+        border: 1px solid black;
+        margin: 50px auto;
+        padding: 10px;
+    }
+
+    #btn{
+         margin: 10px auto;
+        width: 30vw;
+    }   
+}
+
+/* for tablets */
+
+@media(max-width: 1024px){
+    .main{
+        text-align: center;
+        font-weight: bold;
+        width: fit-content;
+        border: 1px solid black;
+        margin: 50px auto;
+        padding: 10px;
+    }
+
+    #btn{
+         margin: 15px auto;
+        width: 60vw;
+    }
+
+}
