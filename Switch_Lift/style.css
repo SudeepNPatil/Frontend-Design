@@ -147,16 +147,19 @@ p{
         text-align: center;
         font-weight: bold;
         width: fit-content;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         margin: 50px auto;
         padding: 10px;
     }
-
-    #btn{
-         margin: 10px auto;
-        width: 20vw;
+    label{
+        display: block;
+        line-height: 1.5rem;
     }
-
+    
+    #btn{
+         margin: 15px auto;
+        width: 30vw;
+    }
 
 }
 
@@ -167,15 +170,21 @@ p{
         text-align: center;
         font-weight: bold;
         width: fit-content;
-        border: 1px solid black;
+       /*  border: 1px solid black; */
         margin: 50px auto;
         padding: 10px;
     }
-
-    #btn{
-         margin: 10px auto;
+     label{
+        display: block;
+        line-height: 1.5rem;
+    }
+    #input1,#input2{
+        margin-top: 10px;
+    } 
+     #btn{
+         margin: 15px auto;
         width: 30vw;
-    }   
+    }
 }
 
 /* for tablets */
@@ -185,14 +194,10 @@ p{
         text-align: center;
         font-weight: bold;
         width: fit-content;
-        border: 1px solid black;
+       /*  border: 1px solid black; */
         margin: 50px auto;
         padding: 10px;
     }
 
-    #btn{
-         margin: 15px auto;
-        width: 60vw;
-    }
 
 }
