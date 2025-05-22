@@ -112,11 +112,14 @@ btn.addEventListener("click", (event) => {
 
             if (lif == null) {
 
+                let dd;
+
                 for (let l = 0; l < queue1.length; l++) {
 
                     let lol = document.getElementById(`lift${l}`)
                     let lol2 = lol.getAttribute('setposition')
                     let lol3 = Number(lol2)
+                    dd = lol3
                     if (lol3 == va) {
                         const alert = document.createElement('div')
                         alert.setAttribute('class', 'alert')
@@ -132,22 +135,23 @@ btn.addEventListener("click", (event) => {
                         return 0;
                     }
 
-                    if (queue2[l] == 'false') {
-
-                        const alert = document.createElement('div')
-                        alert.setAttribute('class', 'alert')
-                        alert.style.backgroundColor = 'rgb(0 225 0)'
-                        alert.textContent = 'All lifts are in upper flore ! Please Click Down button to get lift'
-                        document.body.appendChild(alert)
-                        setTimeout(() => {
-
-                            document.body.removeChild(alert)
-
-                        }, 3000)
-                        return 0;
-
-                    }
                 }
+
+                if (va < dd) {
+                    const alert = document.createElement('div')
+                    alert.setAttribute('class', 'alert')
+                    alert.style.backgroundColor = 'rgb(0 150 0)'
+                    alert.textContent = `Please click Down button to get lift!`
+                    document.body.appendChild(alert)
+                    setTimeout(() => {
+
+                        document.body.removeChild(alert)
+
+                    }, 3000)
+
+                    return 0;
+                }
+
 
                 const alert = document.createElement('div')
                 alert.setAttribute('class', 'alert')
@@ -265,6 +269,7 @@ btn.addEventListener("click", (event) => {
 
             if (lif == null) {
 
+
                 for (let l = 0; l < queue1.length; l++) {
 
                     let lol = document.getElementById(`lift${l}`)
@@ -284,21 +289,22 @@ btn.addEventListener("click", (event) => {
 
                         return 0;
                     }
-                    if (queue2[l] == 'false') {
 
+                    if (va > lol3) {
                         const alert = document.createElement('div')
                         alert.setAttribute('class', 'alert')
-                        alert.style.backgroundColor = 'rgb(0 225 0)'
-                        alert.textContent = 'All lifts are in lower flore ! Please Click Up button to get lift'
+                        alert.style.backgroundColor = 'rgb(0 150 0)'
+                        alert.textContent = 'Please click the up button to get lift'
                         document.body.appendChild(alert)
                         setTimeout(() => {
 
                             document.body.removeChild(alert)
 
                         }, 3000)
-                        return 0;
 
+                        return 0;
                     }
+
 
                 }
 
