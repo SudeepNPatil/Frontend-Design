@@ -46,7 +46,6 @@ label{
     height: 125px;
     background-color:#ecffe7;
     box-sizing: border-box;
-    /* margin: 0px 0px 0px 100px; */
 }
 
 .childdiv{
@@ -139,65 +138,3 @@ p{
 }
 
 
-/*  for Mobile small screen */
-
-@media (max-width : 480px){
-
-    .main{
-        text-align: center;
-        font-weight: bold;
-        width: fit-content;
-        /* border: 1px solid black; */
-        margin: 50px auto;
-        padding: 10px;
-    }
-    label{
-        display: block;
-        line-height: 1.5rem;
-    }
-    
-    #btn{
-         margin: 15px auto;
-        width: 30vw;
-    }
-
-}
-
-
-/*  for Mobile medium screen */
-@media(max-width : 768px){
-    .main{
-        text-align: center;
-        font-weight: bold;
-        width: fit-content;
-       /*  border: 1px solid black; */
-        margin: 50px auto;
-        padding: 10px;
-    }
-     label{
-        display: block;
-        line-height: 1.5rem;
-    }
-    #input1,#input2{
-        margin-top: 10px;
-    } 
-     #btn{
-         margin: 15px auto;
-        width: 30vw;
-    }
-}
-
-/* for tablets */
-
-@media(max-width: 1024px){
-    .main{
-        text-align: center;
-        font-weight: bold;
-        width: fit-content;
-       /*  border: 1px solid black; */
-        margin: 50px auto;
-        padding: 10px;
-    }
-
-
-}

@@ -13,7 +13,7 @@ const main = document.getElementById("main")
 
 const btn = document.getElementById("btn")
 
-let flore;
+let floor;
 
 let lift;
 
@@ -121,18 +121,49 @@ btn.addEventListener("click", (event) => {
                     let lol3 = Number(lol2)
                     dd = lol3
                     if (lol3 == va) {
-                        const alert = document.createElement('div')
-                        alert.setAttribute('class', 'alert')
-                        alert.style.backgroundColor = 'rgb(225 225 0)'
-                        alert.textContent = `lift is already there in ${va} flore`
-                        document.body.appendChild(alert)
-                        setTimeout(() => {
 
-                            document.body.removeChild(alert)
+                        let leftdoor = document.getElementById(`leftdoor${l}`)
+                        let rightdoor = document.getElementById(`rightdoor${l}`)
 
-                        }, 3000)
+                        let per = 90;
+                        let doorbg = setInterval(function () {
+
+                            console.log("lift interval started")
+                            per = per - 1;
+
+                            if (per <= 5) {
+                                clearInterval(doorbg)
+                                setTimeout(() => {
+                                    leftdoor.style.background = ''
+                                    rightdoor.style.background = ''
+                                    rightdoor.style.borderLeft = '1px solid black'
+                                }, 1500)
+
+                            }
+
+                            leftdoor.style.background = `linear-gradient(to right, rgb(78, 255, 225) ${per}%, white ${per}%)`;
+                            rightdoor.style.background = `linear-gradient(to left, rgb(78, 255, 225) ${per}%, white ${per}%)`;
+                            rightdoor.style.borderLeft = '0px'
+                        }, 30)
 
                         return 0;
+
+
+
+
+
+                        /*  const alert = document.createElement('div')
+                         alert.setAttribute('class', 'alert')
+                         alert.style.backgroundColor = 'rgb(225 225 0)'
+                         alert.textContent = `lift is already there in ${va} flore`
+                         document.body.appendChild(alert)
+                         setTimeout(() => {
+ 
+                             document.body.removeChild(alert)
+ 
+                         }, 3000)
+ 
+                         return 0; */
                     }
 
                 }
@@ -223,7 +254,7 @@ btn.addEventListener("click", (event) => {
                             leftdoor.style.background = `linear-gradient(to right, rgb(78, 255, 225) ${per}%, white ${per}%)`;
                             rightdoor.style.background = `linear-gradient(to left, rgb(78, 255, 225) ${per}%, white ${per}%)`;
                             rightdoor.style.borderLeft = '0px'
-                        }, 40)
+                        }, 30)
 
 
                     }
@@ -231,7 +262,7 @@ btn.addEventListener("click", (event) => {
 
                     lif.style.top = lif.offsetTop - 1 + "px";
 
-                }, 30)
+                }, 20)
 
             }
 
@@ -276,18 +307,45 @@ btn.addEventListener("click", (event) => {
                     let lol2 = lol.getAttribute('setposition')
                     let lol3 = Number(lol2)
                     if (lol3 == va) {
-                        const alert = document.createElement('div')
-                        alert.setAttribute('class', 'alert')
-                        alert.style.backgroundColor = 'rgb(225 225 0)'
-                        alert.textContent = `lift is already there in ${va} flore`
-                        document.body.appendChild(alert)
-                        setTimeout(() => {
 
-                            document.body.removeChild(alert)
+                        let leftdoor = document.getElementById(`leftdoor${l}`)
+                        let rightdoor = document.getElementById(`rightdoor${l}`)
 
-                        }, 3000)
+                        let per = 90;
+                        let doorbg = setInterval(function () {
+
+                            console.log("lift interval started")
+                            per = per - 1;
+
+                            if (per <= 5) {
+                                clearInterval(doorbg)
+                                setTimeout(() => {
+                                    leftdoor.style.background = ''
+                                    rightdoor.style.background = ''
+                                    rightdoor.style.borderLeft = '1px solid black'
+                                }, 1500)
+
+                            }
+
+                            leftdoor.style.background = `linear-gradient(to right, rgb(78, 255, 225) ${per}%, white ${per}%)`;
+                            rightdoor.style.background = `linear-gradient(to left, rgb(78, 255, 225) ${per}%, white ${per}%)`;
+                            rightdoor.style.borderLeft = '0px'
+                        }, 30)
 
                         return 0;
+
+                        /*  const alert = document.createElement('div')
+                         alert.setAttribute('class', 'alert')
+                         alert.style.backgroundColor = 'rgb(225 225 0)'
+                         alert.textContent = `lift is already there in ${va} flore`
+                         document.body.appendChild(alert)
+                         setTimeout(() => {
+ 
+                             document.body.removeChild(alert)
+ 
+                         }, 3000) */
+
+
                     }
 
                     if (va > lol3) {
@@ -376,13 +434,13 @@ btn.addEventListener("click", (event) => {
                             leftdoor.style.background = `linear-gradient(to right, rgb(78, 255, 225) ${per}%, white ${per}%)`;
                             rightdoor.style.background = `linear-gradient(to left, rgb(78, 255, 225) ${per}%, white ${per}%)`;
                             rightdoor.style.borderLeft = '0px'
-                        }, 40)
+                        }, 30)
 
                     }
 
                     lif.style.top = lif.offsetTop + 1 + "px";
 
-                }, 30)
+                }, 20)
 
             }
 
@@ -396,12 +454,12 @@ btn.addEventListener("click", (event) => {
     }
 
 
-    lft(flore, lift)
+    lft()
 
 })
 
 
-function lft(f, l) {
+function lft() {
 
     let lifts_tub = document.createElement("div")
 
@@ -443,41 +501,46 @@ function lft(f, l) {
 }
 
 function getliftid(q1, q2, loc_btn) {
-
+    let near = -1;
+    let liftid;
     for (let k = 0; k < q2.length; k++) {
 
         let getlitf = document.getElementById(`lift${k}`)
         let getposition = getlitf.getAttribute('setposition')
-        let avalebal_lift = Number(getposition)
-        console.log(avalebal_lift)
+        let current_lift_location = Number(getposition)
+        console.log(current_lift_location)
 
-        if (avalebal_lift < loc_btn && q2[k] === 'false') {
+        if (current_lift_location < loc_btn && q2[k] === 'false' && near < current_lift_location) {
 
-            return q1[k]
+            near = current_lift_location;
+            liftid = q1[k];
         }
 
     }
 
-    return '0';
+    return liftid;
 
 }
 
 function getliftid_downbtn(q1, q2, loc_btn) {
 
+    let near = floor + 1;
+    let liftid;
     for (let k = 0; k < q2.length; k++) {
 
         let getlitf = document.getElementById(`lift${k}`)
         let getposition = getlitf.getAttribute('setposition')
-        let avalebal_lift = Number(getposition)
-        console.log(avalebal_lift)
+        let current_lift_location = Number(getposition)
+        console.log(current_lift_location)
 
-        if (avalebal_lift > loc_btn && q2[k] === 'false') {
+        if (current_lift_location > loc_btn && q2[k] === 'false' && near > current_lift_location) {
 
-            return q1[k]
+            near = current_lift_location;
+            liftid = q1[k];
         }
 
     }
-    return '0';
+    return liftid;
 }
 
 
