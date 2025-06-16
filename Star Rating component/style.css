@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid greenyellow;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 300px;
+    margin: 170px auto;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+}
+.sub-div{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    gap: 5px;
+    user-select: none;
+}
+span{
+    color:gray; 
+    font-size: 3rem;
+    cursor: pointer;
+}
+.Rate{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
