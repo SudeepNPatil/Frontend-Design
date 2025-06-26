@@ -1,5 +1,27 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import { createBrowserRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+import Restorents from './Components/Restorents.jsx'
+import Restorentmenu from './Components/Restorentmenu.jsx'
 
-createRoot(document.getElementById('root')).render(<App />)
+
+const myrouter = createBrowserRouter([
+    {
+        path: '/',
+        element: <App />,
+        children: [
+            {
+                path: 'Restorents',
+                element: <Restorents />
+            },
+            {
+                path: 'Restorentmenu/:id',
+                element: <Restorentmenu />
+            }
+        ]
+    }
+])
+
+createRoot(document.getElementById('root')).render(<RouterProvider router={myrouter} />)
