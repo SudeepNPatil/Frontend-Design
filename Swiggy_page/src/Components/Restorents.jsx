@@ -24,7 +24,7 @@ export default function Restorents() {
     return (
         <>
 
-            <div className="flex flex-wrap p-2 gap-10 justify-center">
+            <div className="flex flex-wrap p-2 gap-10 justify-center py-28">
                 {data.map((data, index) => (
                     <Link to={`/Restorentmenu/${data.info.id}`} key={index} className="w-60 hover:scale-95 hover:duration-300 hover:cursor-pointer rounded-3xl">
 

@@ -5,7 +5,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import Restorents from './Components/Restorents.jsx'
 import Restorentmenu from './Components/Restorentmenu.jsx'
-
+import Cart from './Components/Cart.jsx'
 
 const myrouter = createBrowserRouter([
     {
@@ -15,6 +15,10 @@ const myrouter = createBrowserRouter([
             {
                 path: 'Restorents',
                 element: <Restorents />
+            },
+            {
+                path: 'Cart',
+                element: <Cart />
             },
             {
                 path: 'Restorentmenu/:id',

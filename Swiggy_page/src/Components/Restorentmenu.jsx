@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import CartContext from "../Context/CartContext";
+import { useContext } from "react";
+
 
 export default function Restorentmenu() {
 
     const params = useParams();
+
+    const { Cartitem, setCartitem, itemCount, setitemCount } = useContext(CartContext)
 
     const [menudata, setmenudata] = useState(null);
 
@@ -16,7 +21,7 @@ export default function Restorentmenu() {
 
 
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center py-28">
 
             {menudata && <div className="w-[760px] mt-4">
 
@@ -68,13 +73,13 @@ export default function Restorentmenu() {
                 <div className="flex flex-col mt-10">
                     <h1 className="text-xl font-semibold">Recomended</h1>
 
-                    {menudata.data.cards[5]?.groupedCard.cardGroupMap?.REGULAR?.cards[2].card.card.itemCards.map((item, index) => (
-                        <div key={item.card.info.id} className="flex flex-col">
+                    {menudata.data.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card?.card?.itemCards?.map((item) => (
+                        <div key={item?.card?.info?.id} className="flex flex-col">
                             <div className="flex flex-row justify-between mt-10">
                                 <div className="flex-flex-col gap-5 pt-4 pr-4">
                                     <h2 className="font-bold text-base">{item?.card?.info?.name}</h2>
                                     <p className="font-semibold mt-0.5">₹{item?.card?.info?.price / 100}</p>
-                                    <p className="mt-2">⭐ {item?.card?.info?.ratings.aggregatedRating.rating}({item?.card?.info?.ratings.aggregatedRating.ratingCountV2})</p>
+                                    <p className="mt-2">⭐ {item?.card?.info?.ratings?.aggregatedRating?.rating}({item?.card?.info?.ratings?.aggregatedRating?.ratingCountV2})</p>
                                     <p className="text-gray-500 mt-3">{item?.card?.info?.description}</p>
                                 </div>
 
@@ -82,7 +87,9 @@ export default function Restorentmenu() {
                                     <div className="w-40 rounded-xl">
                                         <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/${item?.card?.info?.imageId}`} alt={`${item?.card?.info?.name}`} className="w-fit object-cover rounded-xl" />
                                     </div>
-                                    <button className="absolute -bottom-5 bg-white  py-2 px-8 left-1/2 transform -translate-x-12  border rounded-lg text-green-500 font-bold">
+                                    <button
+                                        onClick={() => { setCartitem(item), setitemCount(itemCount + 1) }}
+                                        className="absolute -bottom-5 bg-white  py-2 px-8 left-1/2 transform -translate-x-12  border rounded-lg text-green-500 font-bold">
                                         ADD
                                     </button>
                                 </div>
