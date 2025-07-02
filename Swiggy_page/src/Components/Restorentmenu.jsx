@@ -8,7 +8,7 @@ export default function Restorentmenu() {
 
     const params = useParams();
 
-    const { Cartitem, setCartitem, itemCount, setitemCount } = useContext(CartContext)
+    const { cartItem, addToCart } = useContext(CartContext)
 
     const [menudata, setmenudata] = useState(null);
 
@@ -88,7 +88,7 @@ export default function Restorentmenu() {
                                         <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/${item?.card?.info?.imageId}`} alt={`${item?.card?.info?.name}`} className="w-fit object-cover rounded-xl" />
                                     </div>
                                     <button
-                                        onClick={() => { setCartitem(item), setitemCount(itemCount + 1) }}
+                                        onClick={() => (addToCart(item))}
                                         className="absolute -bottom-5 bg-white  py-2 px-8 left-1/2 transform -translate-x-12  border rounded-lg text-green-500 font-bold">
                                         ADD
                                     </button>

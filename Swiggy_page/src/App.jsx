@@ -1,22 +1,19 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
 import { Outlet } from "react-router-dom";
-import CartContext from "./Context/CartContext";
-import { useState } from "react";
+import { CartProvider } from "./Context/CartContext";
 
 
 export default function App() {
 
-  const [Cartitem, setCartitem] = useState(null)
-
-  const [itemCount, setitemCount] = useState(null)
-
+  console.log("app component is rendered")
   return (
     <>
-      <CartContext.Provider value={{ Cartitem, setCartitem, itemCount, setitemCount }}>
+      <CartProvider>
         <Navbar />
         <Outlet />
-      </CartContext.Provider>
+      </CartProvider>
+
     </>
   )
 }

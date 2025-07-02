@@ -28,4 +28,6 @@ const myrouter = createBrowserRouter([
     }
 ])
 
+console.log("router page is rendered")
+
 createRoot(document.getElementById('root')).render(<RouterProvider router={myrouter} />)

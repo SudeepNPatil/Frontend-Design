@@ -6,8 +6,9 @@ import CartContext from "../Context/CartContext";
 
 export default function Navbar() {
 
-    const { itemCount, setitemCount } = useContext(CartContext);
+    const { cartItem } = useContext(CartContext);
 
+    console.log("navbar is rendered")
     return (
         <div className="bg-gray-100 flex justify-between h-20 items-center z-50 px-28 fixed w-full ">
 
@@ -21,7 +22,7 @@ export default function Navbar() {
 
                 <Link to={`/Contact`}>Contact</Link>
 
-                <Link to={`/Cart`}>Cart {itemCount === null ? '' : <div className="relative bg-pink-700 px-2 -top-3 right-3 rounded-full text-white inline-block">{itemCount}</div>}</Link>
+                <Link to={`/Cart`}>Cart {cartItem.length == 0 ? '' : <div className="relative bg-pink-700 px-2 -top-3 right-3 rounded-full text-white inline-block">{cartItem.length}</div>}</Link>
             </div>
 
         </div>
