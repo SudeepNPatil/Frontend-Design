@@ -4,8 +4,8 @@ if you want to see the demo please Click on the Folder
 
 Here Some of Sample designs what I did Since last 6 Months
 
-  	Lift Simulation 
-	View Live Demo here -> [https://lift-mument.netlify.app/](https://lift-mument.netlify.app/)
+# Lift Simulation 
+[View Live Demo here](https://lift-mument.netlify.app/)
 ![chrome_SpfUtXbWJ9](https://github.com/user-attachments/assets/3c31417f-a75e-4090-800e-509ae7479f0b)
 
   	Checkout Card
